@@ -8,7 +8,10 @@ public class Usuario {
 	    private String correo;
 	    private String contrasena;
 	    private Date fechaacimiento;
-		public int getId() {
+	    private int horoscopoId; 
+	
+	    
+	    public int getId() {
 			return id;
 		}
 		public void setId(int id) {
@@ -37,6 +40,18 @@ public class Usuario {
 		}
 		public void setFechaacimiento(Date fechaacimiento) {
 			this.fechaacimiento = fechaacimiento;
+		}
+		/**
+		 * @return the horoscopoId
+		 */
+		public int getHoroscopoId() {
+			return horoscopoId;
+		}
+		/**
+		 * @param horoscopoId the horoscopoId to set
+		 */
+		public void setHoroscopoId(int horoscopoId) {
+			this.horoscopoId = horoscopoId;
 		}
 
 }
