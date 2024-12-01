@@ -1,5 +1,7 @@
 package com.edutecno.dao;
 
+import java.util.List;
+
 import com.edutecno.modelo.Usuario;
 
 public interface UsuarioDAO {
