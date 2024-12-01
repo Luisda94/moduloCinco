@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 /**
  * Servlet implementation class autenticacionServlet
@@ -39,21 +40,22 @@ public class autenticacionServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
 		 String correo = request.getParameter("correo");
 	        String contrasena = request.getParameter("contrasena");
 
-	        UsuarioDAO usuarioDAO = new UsuarioDAOImpl();
-	        Usuario usuario = usuarioDAO.iniciarSesion(correo, contrasena);
-
-	        if (usuario != null) {
-	            HttpSession session = request.getSession();
-	            session.setAttribute("usuario", usuario);
-	            response.sendRedirect("consulta.jsp");
-	        } else {
-	            request.setAttribute("error", "Credenciales inválidas.");
-	            request.getRequestDispatcher("login.jsp").forward(request, response);
+	        UsuarioDAO usuarioDAO = new UsuarioDAO();
+	        try {
+	            Usuario usuario = usuarioDAO.obtenerUsuarioPorCorreo(correo);
+	            if (usuario != null && usuario.getContrasena().equals(contrasena)) {
+	                HttpSession session = request.getSession();
+	                session.setAttribute("usuario", usuario);
+	                response.sendRedirect("horoscopo.jsp");
+	            } else {
+	                response.sendRedirect("login.jsp?error=Invalid credentials");
+	            }
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	            response.sendRedirect("login.jsp?error=Database error");
 	        }
 	    }
 	}
