@@ -11,7 +11,22 @@ public class Usuario {
 	    private int horoscopoId; 
 	
 	    
-	    public int getId() {
+	    /**
+		 * @param id
+		 * @param nombre
+		 * @param correo
+		 * @param contrasena
+		 * @param fechaNacimiento
+		 */
+		public Usuario(int id, String nombre, String correo, String contrasena, Date fechaNacimiento) {
+			super();
+			this.id = id;
+			this.nombre = nombre;
+			this.correo = correo;
+			this.contrasena = contrasena;
+			this.fechaNacimiento = fechaNacimiento;
+		}
+		public int getId() {
 			return id;
 		}
 		public void setId(int id) {

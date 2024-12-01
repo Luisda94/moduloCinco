@@ -22,9 +22,9 @@ public class EliminarUsuario extends HttpServlet {
         boolean eliminado = eliminarUsuario(username);
 
         if (eliminado) {
-            response.sendRedirect("listarUsuarios.jsp?mensaje=Usuario eliminado");
+            response.sendRedirect("ListarUsuarios.jsp?mensaje=Usuario eliminado");
         } else {
-            response.sendRedirect("listarUsuarios.jsp?error=Error al eliminar usuario");
+            response.sendRedirect("ListarUsuarios.jsp?error=Error al eliminar usuario");
         }
     }
 

@@ -24,7 +24,7 @@ public class ModificarUsuario extends HttpServlet {
         boolean actualizado = modificarUsuario(username, nuevoPassword, nuevaFechaNacimiento);
 
         if (actualizado) {
-            response.sendRedirect("listarUsuarios.jsp?mensaje=Usuario actualizado");
+            response.sendRedirect("ListarUsuarios.jsp?mensaje=Usuario actualizado");
         } else {
             response.sendRedirect("modificarUsuario.jsp?error=Error al actualizar");
         }

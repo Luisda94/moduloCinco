@@ -10,7 +10,7 @@
 <body>
     <div class="container mt-5">
         <h2 class="text-center">Registro de Usuario</h2>
-        <form action="CrearUsuarioServlet" method="post" class="mt-4">
+        <form action="CrearUsuario" method="post" class="mt-4">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre Completo</label>
                 <input type="text" class="form-control" id="nombre" name="nombre" required>
