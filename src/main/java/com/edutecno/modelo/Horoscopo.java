@@ -5,7 +5,19 @@ import java.sql.Date;
 public class Horoscopo {
     private int id;
     private String signo;
-    private Date fechaInicio;
+    public void setId(int id) {
+		this.id = id;
+	}
+	public void setSigno(String signo) {
+		this.signo = signo;
+	}
+	public void setFechaInicio(Date fechaInicio) {
+		this.fechaInicio = fechaInicio;
+	}
+	public void setFechaFin(Date fechaFin) {
+		this.fechaFin = fechaFin;
+	}
+	private Date fechaInicio;
     private Date fechaFin;
 	public int getId() {
 		return id;
