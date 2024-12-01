@@ -5,8 +5,13 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public final class ConexionDB {
+	
+	
+		 public static Connection getConnection() throws SQLException {
+			   		
 
-	public static void main(String[] args) {
+
+		
 		// TODO Auto-generated method stub
 		
 	       String url = "jdbc:postgresql://localhost:5432/DBHoroscopoChino"; // Cambia 'localhost', '5432' y 'tu_base_de_datos' según tu configuración.
@@ -42,7 +47,13 @@ public final class ConexionDB {
 	                }
 	            }
 	        }
+			return conexion;
 
 	}
+
+	
+	
+
+
 
 }

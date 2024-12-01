@@ -13,8 +13,8 @@ import com.edutecno.procesaconexion.ConexionDB;
 public class HoroscopoDAO {
 	 private Connection conn;
 
-	    public HoroscopoDAO() {
-    conn = ConexionDB.getConexion();
+	    public HoroscopoDAO() throws SQLException {
+    conn = ConexionDB.getConnection();
 }
 
 public List<Horoscopo> obtenerHoroscopo() throws SQLException {
@@ -26,7 +26,7 @@ public List<Horoscopo> obtenerHoroscopo() throws SQLException {
     while (rs.next()) {
         Horoscopo horoscopo = new Horoscopo();
         horoscopo.setSigno(rs.getString("animal"));
-        horoscopo.setFechaInicio(rs.getDate("fecha_inicio"));
+        horoscopo.setFechaInicio(rs.getDate("fecha_zinicio"));
         horoscopo.setFechaFin(rs.getDate("fecha_fin"));
         lista.add(horoscopo);
     }
