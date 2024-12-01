@@ -7,7 +7,7 @@ public class Usuario {
 	    private String nombre;
 	    private String correo;
 	    private String contrasena;
-	    private Date fechaacimiento;
+	    private Date fechaNacimiento;
 	    private int horoscopoId; 
 	
 	    
@@ -35,11 +35,11 @@ public class Usuario {
 		public void setContrasena(String contrasena) {
 			this.contrasena = contrasena;
 		}
-		public Date getFechaacimiento() {
-			return fechaacimiento;
+		public Date getFechaNacimiento() {
+			return fechaNacimiento;
 		}
-		public void setFechaacimiento(Date fechaacimiento) {
-			this.fechaacimiento = fechaacimiento;
+		public void setFechaNacimiento(Date fechaacimiento) {
+			this.fechaNacimiento = fechaacimiento;
 		}
 		/**
 		 * @return the horoscopoId
