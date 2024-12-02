@@ -48,7 +48,7 @@ public class ConsultarHoroscopo extends HttpServlet {
 		}
         List<Horoscopo> listaHoroscopo = null;
 		try {
-			listaHoroscopo = horoscopoDAO.obtenerHoroscopo();
+			listaHoroscopo = horoscopoDAO.obtenerHoroscopos();
 		} catch (SQLException e) {
 		      request.setAttribute("error", "Error al obtener los datos de horóscopos desde la base de datos");
 		      request.getRequestDispatcher("error.jsp").forward(request, response);

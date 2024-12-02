@@ -12,11 +12,11 @@ public class Usuario {
 	
 	    
 	    /**
-		 * @param id
-		 * @param nombre
-		 * @param correo
-		 * @param contrasena
-		 * @param fechaNacimiento
+	     * @param id 
+	     * @param nombre 
+	     * @param correo 
+	     * @param contrasena 
+	     * @param fechaNacimiento 
 		 */
 		public Usuario(int id, String nombre, String correo, String contrasena, Date fechaNacimiento) {
 			super();
@@ -25,6 +25,9 @@ public class Usuario {
 			this.correo = correo;
 			this.contrasena = contrasena;
 			this.fechaNacimiento = fechaNacimiento;
+		}
+		public Usuario() {
+			// TODO Auto-generated constructor stub
 		}
 		public int getId() {
 			return id;

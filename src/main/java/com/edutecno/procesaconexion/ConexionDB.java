@@ -5,7 +5,23 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public final class ConexionDB {
+     
+    	private static final   String url = "jdbc:postgresql://localhost:5432/DBHoroscopoChino";
+    	private static final   String user = "postgres";
+    	private static final   String password = "Hat422@";
+       
+
+        public static Connection getConexion() {
+            try {
+                return DriverManager.getConnection(url, user, password);
+            } catch (SQLException e) {
+                e.printStackTrace();
+                return null;
+            }
+    }
 	
+	
+/*	
 	
 		 public static Connection getConnection() throws SQLException {
 			   		
@@ -46,11 +62,11 @@ public final class ConexionDB {
 	                    e.printStackTrace();
 	                }
 	            }
-	        }
+    }
 			return conexion;
 
 	}
-
+*/	    
 	
 	
 
